@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="root" style="-fx-border-color : transparent; -fx-background-color : white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.crud_erp.controllers.MainController">
+   <stylesheets>
+      <URL value="@../../../../../../Desktop/DashboardFx-master/src/main/resources/io.github.gleidsonmt.dashboardfx/style/css/colors.css" />
+      <URL value="@../../../../../../Desktop/DashboardFx-master/src/main/resources/io.github.gleidsonmt.dashboardfx/style/css/skeleton.css" />
+      <URL value="@../../../../../../Desktop/DashboardFx-master/src/main/resources/io.github.gleidsonmt.dashboardfx/style/css/bootstrap.css" />
+      <URL value="@../../../../../../Desktop/DashboardFx-master/src/main/resources/io.github.gleidsonmt.dashboardfx/style/css/helpers.css" />
+      <URL value="@../../../../../../Desktop/DashboardFx-master/src/main/resources/io.github.gleidsonmt.dashboardfx/style/css/typographic.css" />
+   </stylesheets>
+   <children>
+      <ScrollPane fitToWidth="true">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+         <content>
+            <VBox fx:id="body" prefHeight="601.0" prefWidth="902.0" spacing="10.0">
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+               <children>
+                  <GridPane fx:id="gridTiles" alignment="CENTER_LEFT" hgap="20.0" prefHeight="126.0" prefWidth="734.0" stylesheets="@../css/styles.css" vgap="20.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: -light-gray-2;" stylesheets="@../css/styles.css">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="76.0" prefWidth="87.0" style="-fx-background-color: -info; -fx-padding: 20; -fx-background-radius: 10;" styleClass="amber" stylesheets="@../css/styles.css" text="Label">
+                                 <graphic>
+                                    <ImageView fitHeight="32.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/icons8-ouvrier-homme-50.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <children>
+                                    <Text fx:id="tNbrEmployee" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -info;">
+                                       <styleClass>
+                                          <String fx:value="info-text" />
+                                          <String fx:value="text-36" />
+                                       </styleClass>
+                                    </Text>
+                                    <TextField fx:id="tEmployees" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -aqua;" styleClass="subtitle" text="Employees" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="199.0" layoutY="10.0" minHeight="-Infinity" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: -light-gray-2;" stylesheets="@../css/styles.css" GridPane.columnIndex="3">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="55.0" prefWidth="2.0" style="-fx-background-color: -grapefruit; -fx-padding: 20; -fx-background-radius: 10;" styleClass="buy" stylesheets="@../css/styles.css" text="Label">
+                                 <graphic>
+                                    <ImageView fitHeight="47.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/icons8-ventes-totales-64.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <children>
+                                    <TextField fx:id="tSales" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -grapefruit;" styleClass="subtitle" text="Sales" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="388.0" layoutY="10.0" minHeight="-Infinity" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: -light-gray-2;" stylesheets="@../css/styles.css" GridPane.columnIndex="2">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minWidth="74.0" style="-fx-background-color: -amber; -fx-padding: 20; -fx-background-radius: 10;" stylesheets="@../css/styles.css" text="Label">
+                                 <graphic>
+                                    <ImageView fitHeight="44.0" fitWidth="44.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/icons8-coût-80.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <children>
+                                    <TextField fx:id="tCost" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -amber;" styleClass="subtitle" text="Cost" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="388.0" layoutY="10.0" minHeight="-Infinity" minWidth="0.0" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-color: -light-gray-2;" stylesheets="@../css/styles.css" GridPane.columnIndex="1">
+                           <padding>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="GRAPHIC_ONLY" prefHeight="76.0" prefWidth="61.0" style="-fx-background-color: -info; -fx-background-color: -mint; -fx-padding: 20; -fx-background-radius: 10;" stylesheets="@../css/styles.css" text="Label">
+                                 <graphic>
+                                    <ImageView fitHeight="36.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../../../../Downloads/icons8-recevez-euro-80.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Label>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                 <padding>
+                                    <Insets right="20.0" />
+                                 </padding>
+                                 <children>
+                                    <TextField fx:id="tIncome" />
+                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -mint;" styleClass="subtitle" text="Income" wrappingWidth="78.2271728515625" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </GridPane>
+                  <GridPane fx:id="footer" hgap="10.0" vgap="10.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+                  <SplitPane dividerPositions="0.5002272727272726, 0.5075" prefHeight="388.0" prefWidth="882.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                           <children>
+                              <TableView fx:id="tableviewEMP" layoutY="-1.0" prefHeight="390.0" prefWidth="435.0">
+                                 <columns>
+                                    <TableColumn fx:id="colId" prefWidth="44.0" text="id" visible="false" />
+                                    <TableColumn fx:id="colRef" prefWidth="44.0" text="Ref" />
+                                    <TableColumn fx:id="colNom" prefWidth="80.79998779296875" text="Nom" />
+                                    <TableColumn fx:id="colDepartement" prefWidth="79.20001220703125" text="Departement" />
+                                    <TableColumn fx:id="colDate" text="Date " />
+                                    <TableColumn fx:id="colPaiement" prefWidth="69.60003662109375" text="Paiement" />
+                                    <TableColumn fx:id="colTax" prefWidth="70.39993286132812" text="Tax" />
+                                    <TableColumn fx:id="colDeduction" prefWidth="68.0001220703125" text="Deduction" />
+                                    <TableColumn fx:id="colNet" prefWidth="66.39990234375" text="Net" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+                        <TableView fx:id="tableviewPAIM" layoutY="3.0" prefHeight="338.0" prefWidth="484.0" SplitPane.resizableWithParent="false">
+                           <columns>
+                              <TableColumn fx:id="colID" prefWidth="39.200011253356934" text="id" visible="false" />
+                              <TableColumn fx:id="colCode" prefWidth="52.000000953674316" text="Code" />
+                              <TableColumn fx:id="colNom1" prefWidth="55.20001220703125" text="Nom" />
+                              <TableColumn fx:id="colDate1" prefWidth="88.0" text="Date" />
+                              <TableColumn fx:id="colTotal" prefWidth="94.39991760253906" text="Paiement " />
+                              <TableColumn fx:id="colGrand" prefWidth="80.800048828125" text="Tax" />
+                              <TableColumn fx:id="colDue" prefWidth="100.0" text="Paiement final" />
+                              <TableColumn fx:id="colMethod" prefWidth="85.60003662109375" text="Methode" />
+                           </columns>
+                        </TableView>
+                    </items>
+                  </SplitPane>
+                  <ButtonBar prefHeight="40.0" prefWidth="200.0">
+                    <buttons>
+                      <Button fx:id="btnSalary" mnemonicParsing="false" onAction="#SalaryAction" prefHeight="35.0" prefWidth="491.0" text="Salary Overview">
+                           <stylesheets>
+                              <URL value="@../css/dash.css" />
+                              <URL value="@../css/styles.css" />
+                           </stylesheets></Button>
+                        <Button fx:id="btnPaiment" mnemonicParsing="false" onAction="#PaimentAction" stylesheets="@../css/styles.css" text="Paiment Overview" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
+</StackPane>
